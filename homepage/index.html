@@ -14,7 +14,22 @@
     <script>
         function greet() {
             let fname = document.getElementById("fname").value;
-            alert(`Hi ${fname}\nNice to meet you!`)
+            if (fname == "") {
+              alert(`Please enter your name`)
+            } else {
+            alert(`Hi ${fname}\nNice to meet you!`);
+          }
+        }
+
+        function enrolled() {
+          let enrolled = document.getElementById("enrolled").value.toUpperCase();
+          if (enrolled == "YES") {
+            alert("Great! Nice to meet a classmate.\nHigh Five!")
+          } else if (enrolled == "NO") {
+            alert("Oh no! You should try it.")
+          } else {
+            alert("Inavlid response")
+          }
         }
     </script>
 
@@ -30,13 +45,23 @@
         <hr>
         <h2 style="text-align: center;">I am <a href="mailto:upanshulakhani@gmail.com" target="_blank">Upanshu Lakhani</a></h2>
 
-        <!-- <div class="greeting">
+        <div class="greeting">
             <br><br>
             <p>And you are?</p>
             <input type="text" id="fname" name="fname" autocomplete="off" placeholder="Name">
             <button type="submit" onclick="greet()">Submit</button>
+        </div><hr><br>
 
-        </div> -->
+        I am making this website for my <a href="https://cs50.harvard.edu/x/2021/" style="text-decoration: underline; color: #bf3d48" target="_blank">CS50x</a> problem set 8.
+        I am enjoying this course very much as the instructor, <a href="https://cs.harvard.edu/malan/" style="text-decoration: underline; color: #bf3d48" target="_blank">David Malan</a>, is such a great teacher.
+        You never find out when time flies by when he is teaching you.
+        Even the most difficult of concepts in Computer Science seem very easy to me when explained by David.<hr><br>
+
+        <div class="greeting">
+          <p>Are you enrolled in CS50x?</p>
+          <input type="text" id="enrolled" autocomplete="off" placeholder="Hope you are">
+          <button type="submit" onclick="enrolled()">Submit</button>
+        </div>
 
     </div>
 
